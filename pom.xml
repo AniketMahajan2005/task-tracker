@@ -83,7 +83,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lets PATCH tell "field not sent" apart from "field explicitly set to null" -->
+        <!-- Let's PATCH tell "field not sent" apart from "field explicitly set to null" -->
         <dependency>
             <groupId>org.openapitools</groupId>
             <artifactId>jackson-databind-nullable</artifactId>
