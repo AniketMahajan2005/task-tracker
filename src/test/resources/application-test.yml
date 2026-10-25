@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    # In-memory H2 in PostgreSQL mode so tests need no database server.
+    # Flyway still runs the real migration, so the schema is exercised too.
+    url: jdbc:h2:mem:tasktracker;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+app:
+  jwt:
+    secret: test-secret-test-secret-test-secret-1234567890
+    expiration-minutes: 5
