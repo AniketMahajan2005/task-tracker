@@ -81,12 +81,7 @@ public class Task {
         this.updatedAt = now;
     }
 
-    /**
-     * Single place that owns the completed_at rule:
-     * - the first time a task becomes DONE, completed_at is stamped;
-     * - setting DONE again keeps the original completed_at;
-     * - moving to any other status (re-opening) clears it.
-     */
+
     public void changeStatus(TaskStatus newStatus, Instant now) {
         if (newStatus == TaskStatus.DONE) {
             if (this.status != TaskStatus.DONE) {

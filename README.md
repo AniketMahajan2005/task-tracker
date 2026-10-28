@@ -50,7 +50,7 @@ docker compose up --build
 docker compose up -d db
 
 # 2. start the API (reads values from .env automatically)
-mvn spring-boot:run
+./mvnw spring-boot:run
 ```
 
 The API is now on **http://localhost:8080**.
